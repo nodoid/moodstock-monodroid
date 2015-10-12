@@ -1,0 +1,6 @@
+/Users/PFJ/Developer/moodstock_droid/moodstock_droid/obj/Debug/MonoAndroid,Version=v4.0.3.AssemblyAttribute.cs
+/Users/PFJ/Developer/moodstock_droid/moodstock_droid/obj/Debug/moodstock_droid.Jars.moodstocks.jar
+/Users/PFJ/Developer/moodstock_droid/moodstock_droid/bin/Debug/moodstock_droid.dll.mdb
+/Users/PFJ/Developer/moodstock_droid/moodstock_droid/bin/Debug/moodstock_droid.dll
+/Users/PFJ/Developer/moodstock_droid/moodstock_droid/obj/Debug/moodstock_droid.dll
+/Users/PFJ/Developer/moodstock_droid/moodstock_droid/obj/Debug/moodstock_droid.dll.mdb

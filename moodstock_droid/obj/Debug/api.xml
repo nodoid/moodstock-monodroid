@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+<package name="com.moodstocks.android">
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="AutoScannerSession" static="false" visibility="public">
+<implements name="com.moodstocks.android.camera.CameraManager.Listener" name-generic-aware="com.moodstocks.android.camera.CameraManager.Listener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="AutoScannerSession" static="false" type="com.moodstocks.android.AutoScannerSession" visibility="public">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.Scanner">
+</parameter>
+<parameter name="p2" type="com.moodstocks.android.AutoScannerSession.Listener">
+</parameter>
+<parameter name="p3" type="android.view.SurfaceView">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="isListening" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCameraOpenException" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onNewFrameInBackground" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.camera.CameraFrame">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pause" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="resume" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setResultExtras" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setResultTypes" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSearchOptions" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="AutoScannerSession.AdvancedListener" static="true" visibility="public">
+<implements name="com.moodstocks.android.AutoScannerSession.Listener" name-generic-aware="com.moodstocks.android.AutoScannerSession.Listener">
+</implements>
+<method abstract="true" deprecated="not deprecated" final="false" name="onResult" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Result">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="AutoScannerSession.Listener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onCameraOpenFailed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onResult" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Result">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onWarning" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="AutoScannerSession.ReturnCode" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Configuration" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Configuration" static="false" type="com.moodstocks.android.Configuration" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="false" name="platform" static="true" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Configuration.Platform" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Configuration.Platform" static="false" type="com.moodstocks.android.Configuration.Platform" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="DEFAULT" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="GOOGLE_GLASS" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="ManualScannerSession" static="false" visibility="public">
+<implements name="com.moodstocks.android.camera.CameraManager.Listener" name-generic-aware="com.moodstocks.android.camera.CameraManager.Listener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="ManualScannerSession" static="false" type="com.moodstocks.android.ManualScannerSession" visibility="public">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.Scanner">
+</parameter>
+<parameter name="p2" type="com.moodstocks.android.ManualScannerSession.Listener">
+</parameter>
+<parameter name="p3" type="android.view.SurfaceView">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="cancel" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isListening" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCameraOpenException" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onNewFrameInBackground" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.camera.CameraFrame">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pause" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="resume" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setResultTypes" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="snap" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="wantQueryImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="ManualScannerSession.Listener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onCameraOpenFailed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onError" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.MoodstocksError">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onResult" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Result">
+</parameter>
+<parameter name="p1" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onServerSearchStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onWarning" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ManualScannerSession.MsgCode" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ManualScannerSession.ReturnCode" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ManualScannerSession.State" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="BACKGROUND" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="FRAME" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SNAP" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Throwable" extends-generic-aware="java.lang.Throwable" final="false" name="MoodstocksError" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MoodstocksError" static="false" type="com.moodstocks.android.MoodstocksError" visibility="protected">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getErrorCode" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="MoodstocksError.Code" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="MoodstocksError.Code" static="false" type="com.moodstocks.android.MoodstocksError.Code" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="EABORT" static="true" transient="false" type="int" type-generic-aware="int" value="15" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EAPIKEY" static="true" transient="false" type="int" type-generic-aware="int" value="18" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EAPISECRET" static="true" transient="false" type="int" type-generic-aware="int" value="22" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EAUTH" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EBUNDLE" static="true" transient="false" type="int" type-generic-aware="int" value="21" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EBUSY" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ECORRUPT" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ECREDMISMATCH" static="true" transient="false" type="int" type-generic-aware="int" value="12" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EEMPTY" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EIMG" static="true" transient="false" type="int" type-generic-aware="int" value="17" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EMISUSE" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENETWORFAIL" static="true" transient="false" type="int" type-generic-aware="int" value="19" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENOCONN" static="true" transient="false" type="int" type-generic-aware="int" value="9" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENOFILE" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENOIMPL" static="true" transient="false" type="int" type-generic-aware="int" value="23" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENOPERM" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENOREC" static="true" transient="false" type="int" type-generic-aware="int" value="14" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ENOTOPEN" static="true" transient="false" type="int" type-generic-aware="int" value="20" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ESLOWCONN" static="true" transient="false" type="int" type-generic-aware="int" value="13" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ETHREAD" static="true" transient="false" type="int" type-generic-aware="int" value="11" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ETIMEOUT" static="true" transient="false" type="int" type-generic-aware="int" value="10" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EUNAVAIL" static="true" transient="false" type="int" type-generic-aware="int" value="16" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SUCCESS" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Result" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getCorners" native="false" return="float[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getData" native="false" return="byte[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDataFromBase64URL" native="true" return="byte[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDimensions" native="false" return="int[]" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getHomography" native="false" return="android.graphics.Matrix" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getOrigin" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getType" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="warpImage" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="warpImage" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="float">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Result.Extra" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Result.Extra" static="false" type="com.moodstocks.android.Result.Extra" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="CORNERS" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="DIMENSIONS" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="HOMOGRAPHY" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Result.Origin" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Result.Origin" static="false" type="com.moodstocks.android.Result.Origin" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="CLIENT" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SERVER" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Result.Type" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Result.Type" static="false" type="com.moodstocks.android.Result.Type" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="DATAMATRIX" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EAN13" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="EAN8" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="IMAGE" static="true" transient="false" type="int" type-generic-aware="int" value="-2147483648" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NONE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="QRCODE" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Scanner" static="false" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="cancelSync" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="false" return="void" static="false" synchronized="false" visibility="public">
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="count" native="true" return="int" static="false" synchronized="false" visibility="public">
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="decode" native="true" return="com.moodstocks.android.Result" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.advanced.Image">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="destroy" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="get" native="false" return="com.moodstocks.android.Scanner" static="true" synchronized="false" visibility="public">
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="importBundle" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<exception name="IOException" type="java.io.IOException">
+</exception>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="info" native="true" return="java.util.List&lt;byte[]&gt;" static="false" synchronized="false" visibility="public">
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isCompatible" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isSyncing" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="match" native="true" return="com.moodstocks.android.Result" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.advanced.Image">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.Result">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="open" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="pathFromFilesDir" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+<parameter name="p1" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="search" native="true" return="com.moodstocks.android.Result" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.advanced.Image">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setAuthenticatedProxy" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="java.lang.String">
+</parameter>
+<parameter name="p3" type="java.lang.String">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setProxy" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSyncListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Scanner.SyncListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setSyncProxy" native="true" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="sync" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Scanner.1" static="false" visibility="">
+<implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+</implements>
+<method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Scanner.SearchOption" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Scanner.SearchOption" static="false" type="com.moodstocks.android.Scanner.SearchOption" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="DEFAULT" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="NOPARTIAL" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="SMALLTARGET" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="Scanner.SyncListener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onSyncComplete" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSyncFailed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.MoodstocksError">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSyncProgress" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onSyncStart" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility=""/>
+</package>
+<package name="com.moodstocks.android.advanced">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ApiSearcher" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ApiSearcher" static="false" type="com.moodstocks.android.advanced.ApiSearcher" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Scanner">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="cancel" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="int" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="search" native="false" return="com.moodstocks.android.Result" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.advanced.Image">
+</parameter>
+<exception name="MoodstocksError" type="com.moodstocks.android.MoodstocksError">
+</exception>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="ApiSearcher.Status" static="true" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="ApiSearcher.Status" static="false" type="com.moodstocks.android.advanced.ApiSearcher.Status" visibility="public">
+</constructor>
+<field deprecated="not deprecated" final="true" name="ENDED" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RUNNING" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="WAITING" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Image" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Image" static="false" type="com.moodstocks.android.advanced.Image" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="Image" static="false" type="com.moodstocks.android.advanced.Image" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="release" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="retain" native="false" return="com.moodstocks.android.advanced.Image" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Image.ExifOrientation" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="BOTTOM_RIGHT" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="LEFT_BOTTOM" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="RIGHT_TOP" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="TOP_LEFT" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="UNDEFINED" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="Synchronizer" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Synchronizer" static="false" type="com.moodstocks.android.advanced.Synchronizer" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Scanner">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="cancel" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setListener" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.Scanner.SyncListener">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="synchronize" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Synchronizer.Msg" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="COMPLETE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ERROR" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="PROGRESS" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="START" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Tools" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Tools" static="false" type="com.moodstocks.android.advanced.Tools" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="convertNV21ToBitmap" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="dataFromBase64URLString" native="true" return="byte[]" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="detectProxySettings" native="false" return="android.util.Pair&lt;java.lang.String, java.lang.Integer&gt;" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="warpBitmap" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.graphics.Matrix">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="warpBitmap" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.graphics.Bitmap">
+</parameter>
+<parameter name="p1" type="android.graphics.Matrix">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+<parameter name="p4" type="float">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility=""/>
+</package>
+<package name="com.moodstocks.android.camera">
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="AutoFocusManager" static="false" visibility="public">
+<implements name="android.hardware.Camera.AutoFocusCallback" name-generic-aware="android.hardware.Camera.AutoFocusCallback">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="AutoFocusManager" static="false" type="com.moodstocks.android.camera.AutoFocusManager" visibility="protected">
+<parameter name="p0" type="android.hardware.Camera">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="isFocussed" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onAutoFocus" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="android.hardware.Camera">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="requestFocus" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CameraFrame" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="CameraFrame" static="false" type="com.moodstocks.android.camera.CameraFrame" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.camera.CameraFrame.ReleaseListener">
+</parameter>
+<parameter name="p1" type="byte[]">
+</parameter>
+<parameter name="p2" type="com.moodstocks.android.camera.Size">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="release" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="false" name="data" static="false" transient="false" type="byte[]" type-generic-aware="byte[]" value="null" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="orientation" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="size" static="false" transient="false" type="com.moodstocks.android.camera.Size" type-generic-aware="com.moodstocks.android.camera.Size" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="CameraFrame.ReleaseListener" static="true" visibility="protected">
+<method abstract="true" deprecated="not deprecated" final="false" name="onFrameReleased" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="CameraInstance" static="false" visibility="public">
+<implements name="android.hardware.Camera.PreviewCallback" name-generic-aware="android.hardware.Camera.PreviewCallback">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="CameraInstance" static="false" type="com.moodstocks.android.camera.CameraInstance" visibility="protected">
+<parameter name="p0" type="com.moodstocks.android.camera.CameraInstance.Listener">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="close" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isFocussed" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onPreviewFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="android.hardware.Camera">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="openAsync" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="requestFocus" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="startPreview" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stopPreview" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="updatePreviewParameters" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="com.moodstocks.android.camera.Size">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CameraInstance.1" static="true" visibility=""/>
+<interface abstract="true" deprecated="not deprecated" final="false" name="CameraInstance.Listener" static="true" visibility="protected">
+<method abstract="true" deprecated="not deprecated" final="false" name="onCameraOpenException" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onCameraOpenSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onNewFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.camera.Size">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="CameraInstance.Msg" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="FAIL" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="OPEN" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="CameraInstance.OpenThread" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CameraInstance.PreviewParamsManager" static="true" visibility="">
+<constructor deprecated="not deprecated" final="false" name="CameraInstance.PreviewParamsManager" static="false" type="com.moodstocks.android.camera.CameraInstance.PreviewParamsManager" visibility="protected">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDisplayOrientation" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFrameOrientation" native="false" return="int" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getFrameSize" native="false" return="com.moodstocks.android.camera.Size" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setAvailablePreviewSizes" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="java.util.List&lt;com.moodstocks.android.camera.Size&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="update" native="false" return="void" static="false" synchronized="false" visibility="protected">
+<parameter name="p0" type="com.moodstocks.android.camera.Size">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="CameraManager" static="false" visibility="public">
+<implements name="com.moodstocks.android.camera.CameraFrame.ReleaseListener" name-generic-aware="com.moodstocks.android.camera.CameraFrame.ReleaseListener">
+</implements>
+<implements name="com.moodstocks.android.camera.CameraInstance.Listener" name-generic-aware="com.moodstocks.android.camera.CameraInstance.Listener">
+</implements>
+<implements name="com.moodstocks.android.camera.CameraPreview.Listener" name-generic-aware="com.moodstocks.android.camera.CameraPreview.Listener">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="CameraManager" static="false" type="com.moodstocks.android.camera.CameraManager" visibility="public">
+<parameter name="p0" type="android.app.Activity">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.camera.CameraManager.Listener">
+</parameter>
+<parameter name="p2" type="android.view.SurfaceView">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCameraOpenException" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onCameraOpenSuccess" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onFrameReleased" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onNewFrame" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="byte[]">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.camera.Size">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="onPreviewStarts" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.camera.Size">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="start" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
+</parameter>
+<parameter name="p1" type="boolean">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CameraManager.1" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Thread" extends-generic-aware="java.lang.Thread" final="false" name="CameraManager.BackgroundThread" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="android.os.Handler" extends-generic-aware="android.os.Handler" final="false" name="CameraManager.BackgroundThread.BackgroundThreadHandler" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="CameraManager.BackgroundThread.MsgCode" static="true" visibility=""/>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="CameraManager.InitStatus" static="true" visibility=""/>
+<interface abstract="true" deprecated="not deprecated" final="false" name="CameraManager.Listener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="isListening" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onCameraOpenException" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Exception">
+</parameter>
+</method>
+<method abstract="true" deprecated="not deprecated" final="false" name="onNewFrameInBackground" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="com.moodstocks.android.camera.CameraFrame">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CameraPreview" static="false" visibility="public">
+<implements name="android.view.SurfaceHolder.Callback" name-generic-aware="android.view.SurfaceHolder.Callback">
+</implements>
+<constructor deprecated="not deprecated" final="false" name="CameraPreview" static="false" type="com.moodstocks.android.camera.CameraPreview" visibility="protected">
+<parameter name="p0" type="android.view.SurfaceView">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.camera.CameraPreview.Listener">
+</parameter>
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="startAsync" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="stop" native="false" return="void" static="false" synchronized="false" visibility="protected">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+<parameter name="p2" type="int">
+</parameter>
+<parameter name="p3" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="surfaceDestroyed" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+</method>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="CameraPreview.Listener" static="true" visibility="public">
+<method abstract="true" deprecated="not deprecated" final="false" name="onPreviewStarts" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="android.view.SurfaceHolder">
+</parameter>
+<parameter name="p1" type="com.moodstocks.android.camera.Size">
+</parameter>
+</method>
+</interface>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Size" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Size" static="false" type="com.moodstocks.android.camera.Size" visibility="protected">
+<parameter name="p0" type="android.hardware.Camera.Size">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="Size" static="false" type="com.moodstocks.android.camera.Size" visibility="protected">
+<parameter name="p0" type="int">
+</parameter>
+<parameter name="p1" type="int">
+</parameter>
+</constructor>
+<constructor deprecated="not deprecated" final="false" name="Size" static="false" type="com.moodstocks.android.camera.Size" visibility="protected">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="isSet" native="false" return="boolean" static="false" synchronized="false" visibility="protected">
+</method>
+<field deprecated="not deprecated" final="false" name="height" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="false" name="width" static="false" transient="false" type="int" type-generic-aware="int" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility=""/>
+</package>
+<package name="com.moodstocks.android.core">
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Loader" static="false" visibility="public">
+<constructor deprecated="not deprecated" final="false" name="Loader" static="false" type="com.moodstocks.android.core.Loader" visibility="public">
+</constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="isCompatible" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="load" native="false" return="void" static="true" synchronized="true" visibility="public">
+</method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="Loader.Architecture" static="true" visibility="">
+<field deprecated="not deprecated" final="true" name="ARM64" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ARMv6" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ARMv7" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="ARMv7_NEON" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="x86" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="x86_64" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+</class>
+<interface abstract="true" deprecated="not deprecated" final="false" name="package-info" static="false" visibility=""/>
+</package>
+</api>
